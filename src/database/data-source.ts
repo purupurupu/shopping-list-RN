@@ -5,7 +5,7 @@ import { User } from "./entity/User";
 
 export const AppDataSource = new DataSource({
   type: "expo",
-  database: "/shopping-list.db",
+  database: "your-database-name.sqlite",
   driver: ExpoDriver,
   entities: [User],
   synchronize: true,

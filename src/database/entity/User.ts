@@ -1,5 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
-import { ShoppingList } from "./ShoppingList";
+import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
 @Entity()
 export class User {
@@ -7,11 +6,11 @@ export class User {
   id: number;
 
   @Column()
-  name: string;
+  firstName: string;
 
   @Column()
-  email: string;
+  lastName: string;
 
-  @OneToMany(() => ShoppingList, (shoppingList) => shoppingList.user)
-  shoppingLists: ShoppingList[];
+  @Column()
+  age: number;
 }
